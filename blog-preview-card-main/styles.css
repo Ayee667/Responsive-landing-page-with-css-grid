@@ -1,0 +1,126 @@
+:root {
+  --clr-yellow: hsl(47, 88%, 63%);
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-gray-500: hsl(0, 0%, 42%);
+  --clr-gray-950: hsl(0, 0%, 7%);
+  --font-base: "Figtree", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  background-color: var(--clr-yellow);
+  font-family: var(--font-base);
+}
+
+main {
+  background-color: var(--clr-white);
+  border: 1px solid var(--clr-gray-950);
+  border-radius: 20px;
+  box-shadow: 8px 8px 0 0 var(--clr-gray-950);
+  padding: 1.5rem;
+  max-width: 384px;
+}
+
+.article {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.article__image {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+}
+
+.article__category {
+  justify-self: start;
+  font-weight: 800;
+  font-size: 0.9rem;
+  background-color: var(--clr-yellow);
+  padding: 0.35rem 0.8rem;
+  border-radius: 6px;
+}
+
+.article__meta {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.article__date {
+  font-size: 0.9rem;
+  color: var(--clr-gray-950);
+}
+
+.article__title {
+  margin: 0;
+  font-size: clamp(1.4rem, 5vw, 1.8rem);
+  font-weight: 800;
+}
+
+.article__title a {
+  color: var(--clr-gray-950);
+  text-decoration: none;
+}
+
+.article__title a:focus,
+.article__title a:hover {
+  color: var(--clr-yellow);
+}
+
+.article__excerpt {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--clr-gray-500);
+  line-height: 1.5;
+}
+
+.article__author {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.article__avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.article__author-name {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--clr-gray-950);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 375px) {
+  main {
+    margin: 1.5rem;
+    padding: 1.25rem;
+  }
+
+  .article {
+    gap: 1.25rem;
+  }
+
+  .article__excerpt {
+    font-size: 0.95rem;
+  }
+}
