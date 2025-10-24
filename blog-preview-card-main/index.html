@@ -4,33 +4,46 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  <title>Frontend Mentor | Blog preview card</title>
-
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;800&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@500;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+  <title>Frontend Mentor | Blog preview card</title>
 </head>
-
 <body>
-  <div class="card-container">
-    <img id="Yellow-image" src="./assets/images/illustration-article.svg" alt="Web 3.0 illustration">
-    <h4 id="Main-heading">Learning</h4>
-    <p>Published 21 Dec 2023</p>
-    <h3>HTML & CSS foundations</h3>
-    <p>These languages are the backbone of every website, defining structure, content, and presentation.</p>
+  <main>
+    <article class="article" aria-labelledby="article-title">
+      <img
+        class="article__image"
+        src="./assets/images/illustration-article.svg"
+        alt="Abstract illustration made of overlapping shapes"
+      >
 
-    <div class="divider">
-      <img id="Main-image" src="./assets/images/image-avatar.webp" alt="Avatar of Michelle">
-      <h5>Aisha Amadu</h5>
-    </div>
-  </div>
+      <span class="article__category">Learning</span>
 
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Aisha Amadu</a>.
-  </div>
+      <div class="article__meta">
+        <time class="article__date" datetime="2023-12-21">Published 21 Dec 2023</time>
+
+        <h1 class="article__title" id="article-title">
+          <a href="#">HTML &amp; CSS foundations</a>
+        </h1>
+
+        <p class="article__excerpt">
+          These languages are the backbone of every website, defining structure, content, and presentation.
+        </p>
+      </div>
+
+      <footer class="article__author">
+        <img class="article__avatar" src="./assets/images/image-avatar.webp" alt="Portrait of Greg Hooper">
+        <p class="article__author-name">Greg Hooper</p>
+      </footer>
+    </article>
+  </main>
+
+  <p class="attribution">
+    Challenge by
+    <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noreferrer">Frontend Mentor</a>.
+    Coded by <a href="https://github.com/">Your Name Here</a>.
+  </p>
 </body>
 </html>
